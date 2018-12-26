@@ -204,7 +204,10 @@ def signinEnd(course_id, start_date):
         for i in range(0, len(studentList)):
             studentNoSignList.append({'student_id':studentList[i].get('student_id'),'student_name':studentList[i].get('student_name')})
 
-        return {'shouldAttendCount':shouldAttendCount,'attendcount':attendcount,'start_date':start_date,'end_date':otherStyleTime}
+        return {
+            "info": {'shouldAttendCount':shouldAttendCount,'attendcount':attendcount,'start_date':start_date,'end_date':otherStyleTime},
+            "noSignStudents": studentNoSignList
+        }
     except:
         db_signin.rollback()
         return None

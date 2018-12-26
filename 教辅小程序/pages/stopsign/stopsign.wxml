@@ -47,7 +47,7 @@
 <scroll-view
     scroll-y
     style="height: 300px;white-space:nowrap;" > 
-<view class="section" wx:for="{{array}}" wx:for-index="index"  wx:for-item="cell"
+<view class="section" wx:for="{{noSignStudents}}" wx:for-index="index"  wx:for-item="cell"
 >
   <view class='row_label scroll-view-item'>
   <image
@@ -57,8 +57,8 @@
           class='labelv1'
         >
   </image>
-  <text style='font-size:12px;margin-top:9px;margin-left:10px;'>{{cell.name}}</text>
-  <text style='font-size:12px;margin-top:9px;margin-left:50%;'>{{cell.stuid}}</text>
+  <text style='font-size:12px;margin-top:9px;margin-left:10px;'>{{cell.student_name}}</text>
+  <text style='font-size:12px;margin-top:9px;margin-left:50%;'>{{cell.student_id}}</text>
   </view>
   <view class='blank'></view>
 

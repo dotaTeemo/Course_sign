@@ -41,24 +41,9 @@ Page({
   stopsign: function(e){
     //结束轮询
     clearInterval(this.data.getNowSignTimer)
-    
-    wx.request({
-      url: "http://localhost:5000/teacherStopSign",
-      data: {
-        'courseID': this.data.courseID,
-        'startDate': this.data.startDate
-      },
-      method: 'GET',
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        wx.navigateTo({
-          url: '../stopsign/stopsign?allSignNumber=' + res.data.response.shouldAttendCount + '&signNumber=' + res.data.response.attendcount + '&startDate=' + res.data.response.start_date + '&endDate=' + res.data.response.end_date
-        })
-      }
+    wx.navigateTo({
+      url: '../stopsign/stopsign?courseID=' + this.data.courseID + '&startDate=' + this.data.startDate
     })
-    
   },
   onLoad: function (option) {
     var page = this

@@ -4,10 +4,12 @@ const app = getApp()
 
 Page({
   data: {
+    courseID: 0,
     allSignNumber: 0,
     signNumber: 0,
     startDate: '',
     endDate: '',
+    noSignStudents: [],
     motto: '',
     userInfo: {},
     hasUserInfo: false,
@@ -28,10 +30,33 @@ Page({
   },
   onLoad: function (option) {
     this.setData({
-      allSignNumber: option.allSignNumber,
-      signNumber: option.signNumber,
-      startDate: option.startDate.substring(0, 4) + "年" + option.startDate.substring(4, 6) + "月" + option.startDate.substring(6, 8) + "日  " + option.startDate.substring(8, 10) + ":" + option.startDate.substring(10, 12),
-      endDate: option.endDate.substring(0, 4) + "年" + option.endDate.substring(4, 6) + "月" + option.endDate.substring(6, 8) + "日  " + option.endDate.substring(8, 10) + ":" + option.endDate.substring(10, 12)
+      courseID: option.courseID,
+      startDate: option.startDate,
+      // startDate: option.startDate.substring(0, 4) + "年" + option.startDate.substring(4, 6) + "月" + option.startDate.substring(6, 8) + "日  " + option.startDate.substring(8, 10) + ":" + option.startDate.substring(10, 12),
+      // endDate: option.endDate.substring(0, 4) + "年" + option.endDate.substring(4, 6) + "月" + option.endDate.substring(6, 8) + "日  " + option.endDate.substring(8, 10) + ":" + option.endDate.substring(10, 12)
+    })
+
+    var page = this
+    wx.request({
+      url: "http://localhost:5000/teacherStopSign",
+      data: {
+        'courseID': this.data.courseID,
+        'startDate': this.data.startDate
+      },
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        var info = res.data.response.info
+        page.setData({
+          allSignNumber: info.shouldAttendCount,
+          signNumber: info.attendcount,
+          startDate: info.start_date.substring(0, 4) + "年" + info.start_date.substring(4, 6) + "月" + info.start_date.substring(6, 8) + "日  " + info.start_date.substring(8, 10) + ":" + info.start_date.substring(10, 12),
+          endDate: info.end_date.substring(0, 4) + "年" + info.end_date.substring(4, 6) + "月" + info.end_date.substring(6, 8) + "日  " + info.end_date.substring(8, 10) + ":" + info.end_date.substring(10, 12),
+          noSignStudents: res.data.response.noSignStudents
+        })
+      }
     })
     
     if (app.globalData.userInfo) {
