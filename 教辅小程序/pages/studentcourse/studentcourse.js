@@ -12,7 +12,7 @@ Page({
     texta: '请输入内容...',
     courseID: 0
   },
-  onLoad: function () {
+  onShow: function () {
     //获得所有课程信息
     var page = this
     wx.getStorage({
@@ -30,7 +30,8 @@ Page({
           success: function (res) {
             page.setData({
               checkCourses: res.data.response
-            })
+            }),
+              getApp().globalData.checkCourses = this.data.checkCourses
           }
         })
       },

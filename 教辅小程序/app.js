@@ -1,7 +1,8 @@
 //app.js
 App({
   globalData: {
-    userInfo: null
+    userInfo: null,
+    checkCourses: []
   },
   onLaunch: function () {
     // 展示本地存储能力

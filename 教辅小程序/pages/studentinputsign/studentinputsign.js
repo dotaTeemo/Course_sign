@@ -1,10 +1,13 @@
 // pages/inputsign/inputsign.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    pic_array: app.globalData.checkCourses,
+    hx_index: 0,
     focus: false,
     i1_focus: true,
     i2_focus: false,
@@ -64,8 +67,7 @@ Page({
         'signNumber': this.data.num1 + this.data.num2 + this.data.num3 + this.data.num4,
         'studentName': this.data.studentName,
         'studentID': this.data.studentID,
-        // 'courceID': this.data.courceID,
-        'courceID': 1,
+        'courceID': this.data.courceID,
         'longitude': this.data.longitude,
         'latitude': this.data.latitude,
         'openID': this.data.openID
@@ -126,6 +128,12 @@ Page({
           openID: res.data
         })
       },
+    })
+  },
+  bindPickerChange_hx: function (e) {
+    this.setData({
+      courceID: e.target.dataset.selectid,
+      hx_index: e.detail.value,
     })
   }
 })

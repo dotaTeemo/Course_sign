@@ -57,12 +57,12 @@ Page({
                 data: e.detail.value.studentID,
               })
               wx.redirectTo({
-                url: '../studentinfo/studentinfo'
+                url: '../studentcourse/studentcourse'
               })
             }
             //绑定失败，弹窗提醒
             else if (res.data == 'FAIL'){
-
+              this.modalcnt()
             }
           }
         })
