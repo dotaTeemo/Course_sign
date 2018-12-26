@@ -1,4 +1,10 @@
 <!--pages/inputsign/inputsign.wxml-->
+<picker name="picker_hx" class="cybm_pic_1" value="{{pic_array[hx_index].id}}" data-selectid="{{pic_array[hx_index].id}}"  data-selecthx="{{pic_array[hx_index].courseName}}" range="{{pic_array}}" range-key="{{'courseName'}}"  bindchange="bindPickerChange_hx"  >
+  <view class="picker" >
+          选择课程:  {{pic_array[hx_index].courseName}}
+    </view>
+</picker>
+
 <view class='container'>
   <view class='minfo'>
     <view class='inputv'>
