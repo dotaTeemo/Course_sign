@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    pic_array: app.globalData.checkCourses,
+    pic_array: [],
     hx_index: 0,
     focus: false,
     i1_focus: true,
@@ -93,7 +93,9 @@ Page({
       key: 'longitude',
       success: function (res) {
         page.setData({
-          longitude: res.data
+          longitude: res.data,
+          pic_array: app.globalData.checkCourses,
+          courceID: app.globalData.checkCourses[0].id
         })
       }
     })

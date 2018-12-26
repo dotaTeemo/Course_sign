@@ -74,7 +74,10 @@ def addAttend(course_id, sign_number, longitude, latitude, startDate, endDate):
             cursor.execute(sql)
             db_signin.commit()
             id = uuid.uuid4()
-        return str(len(studentList))
+        return {
+            "allSignNumber": str(len(studentList)),
+            "startDate": startDate
+        }
     except:
         db_signin.rollback()
         return '0'
@@ -90,7 +93,7 @@ def showAttend(course_id):
 
     id=0
     shouldAttendCount=0
-    sql1 = """SELECT student_course.student_id, student_info.student_name FROM student_course,student_info where course_id= %s and student_course.student_id=student_info.student_id""" % (course_id)
+    sql1 = """SELECT student_course.student_id, student_info.student_name FROM student_course,student_info where course_id= '%s' and student_course.student_id=student_info.student_id""" % (course_id)
 
     attendarr=[]
     try:
@@ -110,6 +113,7 @@ def showAttend(course_id):
             cursor.execute(sql)
             results = cursor.fetchall()
             for row in results:
+                print(row[0])
                 attendarr.append({
                     'student_name': studentList[i].get('student_name'),
                     'student_id': studentList[i].get('student_id'),
@@ -136,6 +140,7 @@ def showNowAttend(course_id):
     attendcount=0
     sql1 = """SELECT student_course.student_id, student_info.student_name FROM student_course,student_info where course_id= '%s' and student_course.student_id=student_info.student_id""" % (course_id)
     studentNoSignList=[]
+    signInfo = []
     try:
         cursor.execute(sql1)
         results = cursor.fetchall()
@@ -143,11 +148,54 @@ def showNowAttend(course_id):
             studentList.append({'student_id': row[0], 'student_name': row[1]})
         shouldAttendCount=len(studentList)
         now = datetime.datetime.now()
-        otherStyleTime = now.strftime("%Y%m%d")
-        min = otherStyleTime + '0000'
-        max = otherStyleTime + '2400'
+        otherStyleTime = now.strftime("%Y%m%d%H%M")
+        # min = otherStyleTime + '0000'
+        # max = otherStyleTime + '2400'
         for i in range(0, len(studentList)):
-            sql = """SELECT * FROM class_sign where course_id= '%s' and student_id='%s' and issign=1 and start_date>'%s' and end_date<'%s'""" % (course_id,studentList[i].get('student_id'),max,min)
+            sql = """SELECT * FROM class_sign where course_id= '%s' and student_id='%s' and issign=1 and start_date>'%s' and end_date<'%s'""" % (course_id,studentList[i].get('student_id'),otherStyleTime,otherStyleTime)
+            cursor.execute(sql)
+            results = cursor.fetchall()
+            for row in results:
+                attendcount+=1
+                studentList.remove(studentList[i])
+        for i in range(0, len(studentList)):
+            studentNoSignList.append({'student_id':studentList[i].get('student_id'),'student_name':studentList[i].get('student_name')})
+        signInfo.append({'shouldAttendCount':shouldAttendCount,'attendcount':attendcount})
+
+        return studentNoSignList
+    except:
+        db_signin.rollback()
+        return None
+    finally:
+        db_signin.close()
+
+#结束签到,查看缺课学生学号
+def signinEnd(course_id, start_date):
+    db_signin = pymysql.connect(ip, user, pwd, db_name)
+    cursor = db_signin.cursor()
+
+    studentList=[]
+    now = datetime.datetime.now()
+    otherStyleTime = now.strftime("%Y%m%d%H%M")
+
+    studentNoSignList = []
+    shouldAttendCount=0
+    attendcount=0
+    sql = """update class_sign set end_date='%s' where course_id= '%s' and start_date= '%s'""" % (otherStyleTime,course_id,start_date)
+    studentNoSignList=[]
+    try:
+        cursor.execute(sql)
+        db_signin.commit()
+        sql1 = """SELECT student_course.student_id, student_info.student_name FROM student_course,student_info where course_id= '%s' and student_course.student_id=student_info.student_id""" % (
+            course_id)
+        cursor.execute(sql1)
+        results = cursor.fetchall()
+        for row in results:
+            studentList.append({'student_id': row[0], 'student_name': row[1]})
+        shouldAttendCount = len(studentList)
+
+        for i in range(0, len(studentList)):
+            sql = """SELECT * FROM class_sign where course_id= '%s' and student_id='%s' and issign=1 and start_date='%s'""" % (course_id,studentList[i].get('student_id'),start_date)
             cursor.execute(sql)
             results = cursor.fetchall()
             for row in results:
@@ -156,7 +204,7 @@ def showNowAttend(course_id):
         for i in range(0, len(studentList)):
             studentNoSignList.append({'student_id':studentList[i].get('student_id'),'student_name':studentList[i].get('student_name')})
 
-        return studentNoSignList
+        return {'shouldAttendCount':shouldAttendCount,'attendcount':attendcount,'start_date':start_date,'end_date':otherStyleTime}
     except:
         db_signin.rollback()
         return None
@@ -191,4 +239,5 @@ def showComment(course_id):
         db_signin.close()
 
 if __name__ == '__main__':
-    print(showAttend())
+    # print(showAttend())
+    signinEnd('201812261713', '2111514a-e79a-4da7-9742-6f3dba0fccfb')

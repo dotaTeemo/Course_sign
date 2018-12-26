@@ -12,17 +12,17 @@
 </view>
 <view class='blank'></view>
 <view class='section course_label'>
-  <text style="font-size:16px;opacity:0.4">该结果可在“课程”中查看与导出</text>
+  <text style="font-size:16px;opacity:0.4">该结果可在“课程”中查看</text>
 </view>
 <view class='deliever'></view>
 <view class='section course_label'>
-   <text style="font-size:18px">开始时间</text>
-   <text style="font-size:18px;margin-left:50%">11:10</text>
+   <text style="font-size:18px;width:50%">开始时间</text>
+   <text style="font-size:18px;margin-left:40%">{{startDate}}</text>
 </view>
 <view class='blank'></view>
 <view class='section course_label'>
-   <text style="font-size:18px">结束时间</text>
-   <text style="font-size:18px;margin-left:50%">11:20</text>
+   <text style="font-size:18px;width:50%">结束时间</text>
+   <text style="font-size:18px;margin-left:40%">{{endDate}}</text>
 </view>
 
 <view class='deliever'></view>
@@ -33,14 +33,14 @@
 <view class='blank'></view>
 <view class='section course_label'>
    <text style="font-size:18px">实到人数</text>
-   <text style="font-size:18px;margin-left:60%">{{allSignNumber - noSignStudentNumber}}</text>
+   <text style="font-size:18px;margin-left:60%">{{signNumber}}</text>
 </view>
 
 <view class='deliever'></view>
 <view class='deliever'></view>
 <view class='section course_label'>
    <text style="font-size:18px">未到人数</text>
-   <text style="font-size:18px;margin-left:65%">{{noSignStudentNumber}}</text>
+   <text style="font-size:18px;margin-left:65%">{{allSignNumber - signNumber}}</text>
 </view>
 <view class='deliever'></view>
 <view class='section'>

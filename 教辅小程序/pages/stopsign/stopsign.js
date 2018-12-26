@@ -4,8 +4,10 @@ const app = getApp()
 
 Page({
   data: {
-    noSignStudentNumber: 0,
     allSignNumber: 0,
+    signNumber: 0,
+    startDate: '',
+    endDate: '',
     motto: '',
     userInfo: {},
     hasUserInfo: false,
@@ -27,9 +29,10 @@ Page({
   onLoad: function (option) {
     this.setData({
       allSignNumber: option.allSignNumber,
-      noSignStudentNumber: option.noSignStudentNumber
+      signNumber: option.signNumber,
+      startDate: option.startDate.substring(0, 4) + "年" + option.startDate.substring(4, 6) + "月" + option.startDate.substring(6, 8) + "日  " + option.startDate.substring(8, 10) + ":" + option.startDate.substring(10, 12),
+      endDate: option.endDate.substring(0, 4) + "年" + option.endDate.substring(4, 6) + "月" + option.endDate.substring(6, 8) + "日  " + option.endDate.substring(8, 10) + ":" + option.endDate.substring(10, 12)
     })
-    console.log(this.data)
     
     if (app.globalData.userInfo) {
       this.setData({

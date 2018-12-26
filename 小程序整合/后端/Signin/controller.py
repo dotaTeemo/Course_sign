@@ -92,7 +92,14 @@ def teacherStartSign():
     latitude = request.args['latitude']
     endDate = request.args['endDate']
 
-    return make_response(teacherAddOneSign(courseID, signNumber, longitude, latitude, endDate))
+    return make_response(jsonify(response=teacherAddOneSign(courseID, signNumber, longitude, latitude, endDate)))
+
+@app.route('/teacherStopSign', methods=['GET', 'POST'])
+def teacherStopSign():
+    courseID = request.args['courseID']
+    startDate = request.args['startDate']
+
+    return make_response(jsonify(response=teacherStopOneSign(courseID, startDate)))
 
 @app.route('/getSignInResult', methods=['GET', 'POST'])
 def getSignInResult():
@@ -113,6 +120,5 @@ def getCourseAllComments():
     return make_response(jsonify(response=getCourseAllCommentsByCourseID(courseID)))
 
 if __name__ == '__main__':
-    addComment('MF1832123', '2111514a-e79a-4da7-9742-6f3dba0fccfb', 'sss')
     app.run()
 

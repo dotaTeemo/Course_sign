@@ -8,6 +8,8 @@ Page({
     courseName: '',
     allSignNumber: 0,
     noSignStudentIDs: [],
+    startDate: 0,
+    getNowSignTimer: null,
     motto: '',
     userInfo: {},
     hasUserInfo: false,
@@ -37,36 +39,52 @@ Page({
     })
   },
   stopsign: function(e){
-    wx.navigateTo({
-      url: '../stopsign/stopsign?noSignStudentNumber=' + this.data.noSignStudentIDs.length +'&allSignNumber=' + this.data.allSignNumber
+    //结束轮询
+    clearInterval(this.data.getNowSignTimer)
+    
+    wx.request({
+      url: "http://localhost:5000/teacherStopSign",
+      data: {
+        'courseID': this.data.courseID,
+        'startDate': this.data.startDate
+      },
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        wx.navigateTo({
+          url: '../stopsign/stopsign?allSignNumber=' + res.data.response.shouldAttendCount + '&signNumber=' + res.data.response.attendcount + '&startDate=' + res.data.response.start_date + '&endDate=' + res.data.response.end_date
+        })
+      }
     })
+    
   },
   onLoad: function (option) {
+    var page = this
     this.setData({
       courseID: option.courseID,
       courseName: option.courseName,
-      allSignNumber: option.allSignNumber
+      allSignNumber: option.allSignNumber,
+      startDate: option.startDate,
+      getNowSignTimer: setInterval(function () {
+        wx.request({
+          url: "http://localhost:5000/getNowSignInResult",
+          data: {
+            'courseID': page.data.courseID
+          },
+          method: 'GET',
+          header: {
+            'content-type': 'application/json'
+          },
+          success: function (res) {
+            page.setData({
+              noSignStudentIDs: res.data.response
+            })
+          }
+        })
+      }, 2000)
     })
-
-    var page = this
-    //定时刷新签到信息
-    setInterval(function (){
-      wx.request({
-        url: "http://localhost:5000/getNowSignInResult",
-        data: {
-          'courseID': page.data.courseID
-        },
-        method: 'GET',
-        header: {
-          'content-type': 'application/json'
-        },
-        success: function (res) {
-          page.setData({
-            noSignStudentIDs: res.data.response
-          })
-        }
-      })
-    }, 2000)
 
     if (app.globalData.userInfo) {
       this.setData({

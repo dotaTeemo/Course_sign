@@ -126,8 +126,8 @@ Page({
                 data: res.data.response.student_id,
               })
               wx.redirectTo({
-                url: '../studentinfo/studentinfo'
-              })
+                url: '../studentcourse/studentcourse'
+              })  
             }
           }
         })

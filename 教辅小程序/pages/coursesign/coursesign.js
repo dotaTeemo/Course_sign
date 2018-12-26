@@ -82,9 +82,10 @@ Page({
         'content-type': 'application/json'
       },
       success: function (res) {
+        console.log(res.data)
         if (res.data != '0') {
           wx.navigateTo({
-            url: '../startsign/startsign?courseName=' + page.data.courseName + '&courseID=' + page.data.courseID + '&allSignNumber=' + res.data
+            url: '../startsign/startsign?courseName=' + page.data.courseName + '&courseID=' + page.data.courseID + '&allSignNumber=' + res.data.response.allSignNumber + '&startDate=' + res.data.response.startDate
           })
         }else{
           console.log(res.data)

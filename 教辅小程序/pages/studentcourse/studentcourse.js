@@ -31,7 +31,7 @@ Page({
             page.setData({
               checkCourses: res.data.response
             }),
-              getApp().globalData.checkCourses = this.data.checkCourses
+              getApp().globalData.checkCourses = res.data.response
           }
         })
       },

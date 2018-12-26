@@ -20,5 +20,8 @@ def teacherAddOneSign(courseID, signNumber, longitude, latitude, endDate):
     startDate = datetime.datetime.now().strftime("%Y%m%d%H%M")
     return addAttend(courseID, signNumber, longitude, latitude, startDate, endDate)
 
+def teacherStopOneSign(courseID, startDate):
+    return signinEnd(courseID, startDate)
+
 if __name__ == '__main__':
     print(getCoursesByTeacherID('123'))
