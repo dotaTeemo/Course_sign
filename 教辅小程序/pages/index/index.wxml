@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo" style='margin-top : 30%'>
+  <view class='userlable'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+    <block wx:else>
+      <image bindtap="teacherTap" class="userinfo-avatar icon-teacher"  mode="cover"></image>
+      <label>老师</label>
+    </block>
+  </view>
+   <view class='userlable'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+    <block wx:else>
+      <image bindtap="studentTap" class="userinfo-avatar  icon-student" mode="cover"></image>
+       <label>学生</label>
+    </block>
+    </view>
+  </view>
+ 
+</view>

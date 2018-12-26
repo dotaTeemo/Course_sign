@@ -1,0 +1,16 @@
+<!--pages/saddcourse/saddcourse.wxml-->
+<view class="section">
+ <scroll-view
+    scroll-y
+    style="height: 300px;white-space:nowrap;"
+  > 
+    <view class="section section_gap" wx:for="{{canCheckCourses}}" wx:for-item="item">
+      <view class = 'course_label scroll-view-item'>
+        <text class = 'lable11' >{{item.courseName}}</text>
+        <image bindtap='addCourse' class='add-icon' data-course="{{item}}" ></image>
+      </view>
+      <view class = 'deliever'></view>
+    </view>
+
+  </scroll-view>
+</view>

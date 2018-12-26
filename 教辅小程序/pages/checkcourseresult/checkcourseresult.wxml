@@ -1,0 +1,44 @@
+<!--pages/studentsign/studentsign.wxml-->
+<view style='display: flex;text-align: center;height:25%'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+   <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+<view style='display:flex;flex-direction:row'>  
+      <text class = 'lable11'>{{courseName}}</text>
+      <text style = 'width:50%;margin-right:10px;opacity:0.7;font-size:14px;line-height: 45px;text-align:right'>已经上了{{totalClassNumber}}节课</text>
+</view>
+
+
+<view style = 'display:flex;margin-left:5px;margin-right:5px'>  
+      <text style = 'width: 40%;font-size: 16px;text-align: left;line-height: 45px;'>姓名</text>
+      <text style = 'font-size:16px;line-height:45px'>学号</text>
+      <text style = 'width: 50%;font-size: 16px;text-align: right;line-height: 45px;'>缺课次数</text>
+</view>
+<view class = 'deliever'></view>
+<view class="section">
+ <scroll-view
+    scroll-y
+    style="height: 300px;white-space:nowrap;"
+    
+
+  > 
+    <view class="section section_gap" wx:for="{{studentArray}}" wx:for-item="item">
+      <view class = 'course_label scroll-view-item' data-course="{{item}}">
+        <text style = 'width: 50%;font-size: 14px;text-align: left;line-height: 45px;margin-left:5px'>{{item.student_name}}</text>
+        <text style="line-height:45px;font-size:14px">{{item.student_id}}</text>
+        <text style = 'width: 50%;font-size: 14px;text-align: right;line-height: 45px;margin-right:25px'>{{item.shouldAttend-item.actualAttend}}次</text>
+      </view>
+      <view class = 'deliever'></view>
+    </view>
+
+  </scroll-view>
+</view>
+<view class='bottomv'>
+<button class='bottombc' bindtap='toCheckCourse'>课程</button>
+<button class='bottomb'>答题</button>
+<button class='bottomb' bindtap='toSign'>签到</button>
+<button class='bottomb'>我的</button>
+</view>

@@ -1,0 +1,18 @@
+<!--pages/inputsign/inputsign.wxml-->
+<view class='container'>
+  <view class='minfo'>
+    <view class='inputv'>
+      <input type="number" maxlength="1" class='input1'  focus="{{i1_focus}}"  bindinput="onMyEvent1" ></input>
+      <input type="number" maxlength="1" class='input1'   focus="{{i2_focus}}"  style=' margin-left: 30px;'  bindinput="onMyEvent2" ></input>
+      <input type="number" maxlength="1" class='input1' focus="{{i3_focus}}"  style=' margin-left: 30px;'  bindinput="onMyEvent3" ></input>
+      <input type="number" maxlength="1" class='input1'   focus="{{i4_focus}}"  style=' margin-left: 30px; ' bindinput="onMyEvent4"></input>
+    </view>
+    <button style='margin-top: 50%' bindtap='studentSign'>签到</button>
+  </view>
+  <view class='bottomv'>
+    <button class='bottomb' bindtap='course'>课程</button>
+    <button class='bottomb'>答题</button>
+    <button class='bottombc'>签到</button>
+    <button class='bottomb' bindtap='my'>我的</button>
+  </view>
+</view>

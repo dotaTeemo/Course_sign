@@ -1,0 +1,16 @@
+@import "../teacher/teacher.wxss";
+
+.blank{
+  height: 40px;
+  background-color:rgb(255, 254, 254);
+}
+.title{
+  text-align: center;
+  font-size: 20px;
+}
+.addcourse_label{
+border: 1px solid rgb(184, 181, 181);
+display: flex;
+margin-left: 10%;
+margin-right: 10%;
+}

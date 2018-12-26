@@ -1,0 +1,9 @@
+"pages/teacher/teacher"老师签到的主页
+"pages/stopsign/stopsign"老师停止签到的页面 
+"pages/whonosign/whonosign"老师查看谁没签到的页面
+"pages/addcourse/addcourse"老师添加课程的页面
+"pages/coursesign/coursesign"老师课程签到页面
+"pages/startsign/startsign"老师开始签到页面
+"pages/checkcourse/checkcourse"老师查看课程页面
+"pages/checkcoursecomment/checkcoursecomment"老师查看课程反馈页面
+"pages/checkcourseresult/checkcourseresult"老师查看签到结果页面 
