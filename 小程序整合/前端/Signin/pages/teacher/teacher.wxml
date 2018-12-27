@@ -1,0 +1,35 @@
+<!--pages/studentsign/studentsign.wxml-->
+<view style='display: flex;text-align: center;height:25%'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+   <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+<view>  
+      <image
+          style="width: 16px; height: 16px; background-color: #eeeeee; margin-left: 3%;"
+          src="{{img_src}}"
+          bindtap='bindAddCourseTap'
+      ></image>
+      <text class = 'lable11' bindtap='bindAddCourseTap'>添加课程</text>
+      
+</view>
+<view class = 'deliever'></view>
+<view class="section">
+ <scroll-view scroll-y style="height: 300px;white-space:nowrap;"> 
+    <view class="section section_gap" wx:for="{{courses}}" wx:for-item="item">
+      <view class = 'course_label scroll-view-item' data-course="{{item}}" bindtap='toCourse'>
+        <text class = 'lable11'>{{item.courseName}}</text>
+        <text class = 'lable12'>{{item.studentNumber}}人</text>
+      </view>
+      <view class = 'deliever'></view>
+    </view>
+  </scroll-view>
+</view>
+<view class='bottomv'>
+  <button class='bottomb' bindtap='toCheckCourse'>课程</button>
+  <button class='bottomb'>答题</button>
+  <button class='bottombc' bindtap='toSign'>签到</button>
+  <button class='bottomb'>我的</button>
+</view>

@@ -1,0 +1,53 @@
+<!--pages/studentsign/studentsign.wxml-->
+<view style='display: flex;text-align: center;height:25%'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+   <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+<view class='deliever'></view>
+<view class='deliever'></view>
+
+<view class='section course_label'>
+  <image
+          style="width: 24px; height: 24px; background-color: #eeeeee;"
+          src="{{img_src}}"
+      ></image>
+  <text style="font-size:20px;">{{courseName}}</text>
+  
+</view>
+<view class='deliever'></view>
+<view class='section course_label'>
+  <text style="font-size:14px;margin-left:75%;">签到中</text>
+  <image
+          style="width: 16px; height: 16px; background-color: #eeeeee;"
+          src="{{img_time}}"
+      ></image>
+</view>
+<view class='deliever'></view>
+<view class='deliever'></view>
+<view class='deliever'></view>
+<view class='deliever'></view>
+<view class='section' style='text-align:center;'>
+  <text style="font-size:45px;">{{allSignNumber - noSignStudentIDs.length}}/{{allSignNumber}}</text>
+</view>
+<view class='deliever'></view>
+<view class='section course_label'>
+  <text style="font-size:14px;margin-left:75%;" bindtap='whonosign'>谁还没签?</text>
+</view>
+<view class='deliever'></view>
+<view class='deliever'></view>
+
+<view class='section title'>
+  <button size='mini' class='btn-area' bindtap='stopsign' style='font-size:18px;'>结束签到
+  </button>
+</view>
+
+
+<view class='bottomv'>
+<button class='bottomb' bindtap='toCheckCourse'>课程</button>
+<button class='bottomb'>答题</button>
+<button class='bottombc' bindtap='toSign'>签到</button>
+<button class='bottomb'>我的</button>
+</view>

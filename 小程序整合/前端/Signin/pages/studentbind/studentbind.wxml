@@ -1,0 +1,21 @@
+<!--pages/studentbind/studentbind.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <form bindsubmit='bindStudentInfo'>
+      <view style='height:50px'>
+      <button  class='cbutton' type='text'>姓名</button>
+      <view class='cinput'><input style='height : 40px' name='studentName'></input></view></view>
+      <view style='height:50px'>
+      <button  class='cbutton'>学号</button>
+      <view class='cinput'><input style='height : 40px' type='number text' name='studentID'></input></view></view>
+      <button form-type="submit">提交</button>
+    </form>
+  </view>
+</view>

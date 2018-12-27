@@ -1,0 +1,18 @@
+<!--pages/signed/signed.wxml-->
+<view class='container'>
+  <view class='minfo' wx:if="{{returnstate}}">
+    <image class='userinfo-avatar icon-tick' ></image>
+    <text  class='userinfo-nickname '>{{returnmsg}}</text>
+  </view>
+  <view class='minfo' wx:else>
+    <image class='userinfo-avatar icon-sad' ></image>
+    <text  class='userinfo-nickname '>{{returnmsg}}</text>
+  </view>
+
+  <view class='bottomv'>
+    <button class='bottomb'>课程</button>
+    <button class='bottomb'>答题</button>
+    <button class='bottombc'>签到</button>
+    <button class='bottomb' bindtap='studentsign'>我的</button>
+  </view>
+</view>

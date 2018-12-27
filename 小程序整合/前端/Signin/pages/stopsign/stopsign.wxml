@@ -1,0 +1,74 @@
+
+<view class='deliever'></view>
+<view class='deliever'></view>
+
+<view class='section course_label'>
+  <image
+          style="width: 24px; height: 24px; background-color: #eeeeee;"
+          src="{{img_src}}"
+      ></image>
+  <text style="font-size:20px;">{{course}} 签到结果</text>
+  
+</view>
+<view class='blank'></view>
+<view class='section course_label'>
+  <text style="font-size:16px;opacity:0.4">该结果可在“课程”中查看与导出</text>
+</view>
+<view class='deliever'></view>
+<view class='section course_label'>
+   <text style="font-size:18px">开始时间</text>
+   <text style="font-size:18px;margin-left:50%">11:10</text>
+</view>
+<view class='blank'></view>
+<view class='section course_label'>
+   <text style="font-size:18px">结束时间</text>
+   <text style="font-size:18px;margin-left:50%">11:20</text>
+</view>
+
+<view class='deliever'></view>
+<view class='section course_label'>
+   <text style="font-size:18px">应到人数</text>
+   <text style="font-size:18px;margin-left:60%">{{allSignNumber}}</text>
+</view>
+<view class='blank'></view>
+<view class='section course_label'>
+   <text style="font-size:18px">实到人数</text>
+   <text style="font-size:18px;margin-left:60%">{{allSignNumber - noSignStudentNumber}}</text>
+</view>
+
+<view class='deliever'></view>
+<view class='deliever'></view>
+<view class='section course_label'>
+   <text style="font-size:18px">未到人数</text>
+   <text style="font-size:18px;margin-left:65%">{{noSignStudentNumber}}</text>
+</view>
+<view class='deliever'></view>
+<view class='section'>
+<scroll-view
+    scroll-y
+    style="height: 300px;white-space:nowrap;" > 
+<view class="section" wx:for="{{array}}" wx:for-index="index"  wx:for-item="cell"
+>
+  <view class='row_label scroll-view-item'>
+  <image
+           style="width: 30px; height: 30px; background-color: #eeeeee;"
+          src="{{cell.head}}"
+          mode='aspectFit'
+          class='labelv1'
+        >
+  </image>
+  <text style='font-size:12px;margin-top:9px;margin-left:10px;'>{{cell.name}}</text>
+  <text style='font-size:12px;margin-top:9px;margin-left:50%;'>{{cell.stuid}}</text>
+  </view>
+  <view class='blank'></view>
+
+
+</view>
+</scroll-view>
+</view>
+<view class='bottomv'>
+<button class='bottomb' bindtap='toCheckCourse'>课程</button>
+<button class='bottomb'>答题</button>
+<button class='bottombc' bindtap='toSign'>签到</button>
+<button class='bottomb'>我的</button>
+</view>

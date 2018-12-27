@@ -1,0 +1,39 @@
+/* pages/inputsign/inputsign.wxss */
+.minfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inputv{
+  display: flex;
+   flex-direction: row;
+}
+.userinfo-nickname {
+color: #aaa;
+}
+.userinfo-avatar {
+width: 128rpx;
+height: 128rpx;
+margin: 20rpx;
+border-radius: 50%;
+}
+.bottomv {
+  width: 100%;
+  position:fixed;
+  bottom:0;
+  display: flex;
+  flex-direction: row;
+}
+.bottomb {
+  width: 25%
+}
+.bottombc{
+  width: 25%;
+  background-color: gainsboro;
+}
+.input1{
+  text-align: center;
+  background-color: gainsboro;
+  height: 40px;
+  width:40px
+}

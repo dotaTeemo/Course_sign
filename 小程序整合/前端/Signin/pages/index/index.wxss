@@ -1,0 +1,51 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userlable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 100px;
+}
+
+.cinput {
+ float: left;
+ height: 40px;
+ margin-bottom: 0px;
+ margin-top: 10px;
+ margin-left: 4px;
+background-color: rebeccapurple;
+}
+.cbutton {
+  background-color: greenyellow;
+  margin-top:10px;
+  line-height: 40px;
+  width: 200rpx;
+  height: 80rpx;
+  font-size: 15px;
+  float: left
+}
+.submit {
+  margin-top: 80rpx;
+  align-items: center;
+}
+.submitbutton {
+  width: 100px;
+  background-color: whitesmoke;
+}

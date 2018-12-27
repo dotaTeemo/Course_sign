@@ -1,0 +1,56 @@
+<!--pages/studentsign/studentsign.wxml-->
+<view style='display: flex;text-align: center;height:25%'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+   <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+<view class='deliever'></view>
+<view class='deliever'></view>
+
+<view class='section course_label'>
+  <image
+          style="width: 24px; height: 24px; background-color: #eeeeee; margin-left: 3%;"
+          src="{{img_src}}"
+      ></image>
+  <text style="font-size:20px;">{{courseName}}</text>
+</view>
+<view class='deliever'></view>
+<view class='deliever'></view>
+<view class='deliever'></view>
+  
+<view class='inputv section course_label'>
+<text style="font-size:18px;">签到暗号</text>
+<input type="number" maxlength="1" id='1' class='input1'  focus="{{i1_focus}}"  style=' margin-left: 5px;' bindinput="onMyEvent1" ></input>
+<input type="number" maxlength="1"  id='2' class='input1'   focus="{{i2_focus}}"  style=' margin-left: 5px;'  bindinput="onMyEvent2" ></input>
+<input type="number" maxlength="1" id='3' class='input1' focus="{{i3_focus}}"  style=' margin-left: 5px;'  bindinput="onMyEvent3" ></input>
+<input type="number" maxlength="1" id='4' class='input1'   focus="{{i4_focus}}"  style=' margin-left: 5px; ' bindinput="onMyEvent4" ></input>
+</view>
+<view class='deliever'></view>
+<view class='deliever'></view>
+<view class='section course_label'>
+  <text style="font-size:18px;">距离限制</text>
+  <view class="body-view toright">
+    <switch checked bindchange="switchChange"/>
+  </view>
+
+</view>
+<view class='section course_label'>
+  <text style="font-size:14px;">200m范围内才可签到</text>
+  
+</view>
+<view class='deliever'></view>
+<view class='deliever'></view>
+<view class='section title'>
+  <button size='mini' class='btn-area' bindtap='startsign' style='font-size:18px;'>开始签到
+  </button>
+</view>
+
+
+<view class='bottomv'>
+<button class='bottomb'  bindtap='toCheckCourse'>课程</button>
+<button class='bottomb'>答题</button>
+<button class='bottombc' bindtap='toSign'>签到</button>
+<button class='bottomb'>我的</button>
+</view>

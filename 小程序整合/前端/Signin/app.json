@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/teacher/teacher",
+    "pages/stopsign/stopsign",
+    "pages/whonosign/whonosign",
+    "pages/addcourse/addcourse",
+    "pages/coursesign/coursesign",
+    "pages/startsign/startsign",
+    "pages/answer/answer",
+    "pages/logs/logs",
+    "pages/checkcourse/checkcourse",
+    "pages/checkcoursecomment/checkcoursecomment",
+    "pages/checkcourseresult/checkcourseresult",
+    "pages/studentinputsign/studentinputsign",
+    "pages/studentsignreturn/studentsignreturn",
+    "pages/studentbind/studentbind",
+    "pages/studentinfo/studentinfo",
+    "pages/studentcourse/studentcourse",
+    "pages/studentaddcourse/studentaddcourse"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

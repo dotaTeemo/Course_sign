@@ -1,0 +1,26 @@
+<view class='blank'></view>
+<view class='title'><text>添加课程</text></view>
+<view class='blank'></view>
+<form bindsubmit="teacherAddCourse">
+  <view>
+    <text style='font-size: 20px;margin-left:10%;'>课程名称</text>
+    <view class='deliever'></view>
+    <view class="addcourse_label section">  
+      <input name='courseName' style='font-size: 12px' placeholder="请输入课程名称" auto-focus />
+    </view>
+  </view>
+  <view class='blank'></view>
+  <view>
+    <text style='font-size: 20px;margin-left:10%;'>课程人数</text>
+    <view class='deliever'></view>
+    <view class="addcourse_label section">  
+      <input name='studentNumber' style='font-size: 12px' placeholder="请输入课程人数" auto-focus />
+    </view>
+  </view>
+  <view class='blank'></view>
+  <view class='blank'></view>
+  <view class='btn-area title' >
+    <button size='mini' form-type="submit">确认添加</button>
+  </view>
+
+</form>
