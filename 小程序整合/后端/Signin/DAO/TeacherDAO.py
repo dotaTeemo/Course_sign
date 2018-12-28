@@ -1,7 +1,7 @@
 import pymysql, datetime,uuid
-ip = "localhost"
+ip = "111.230.34.63"
 user = "root"
-pwd = "123456"
+pwd = "root"
 db_name = "signin"
 
 #添加课程
