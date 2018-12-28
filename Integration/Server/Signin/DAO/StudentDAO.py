@@ -1,8 +1,9 @@
+# coding=utf-8
 import pymysql
 import datetime,uuid
-ip = "localhost"
+ip = "111.230.34.63"
 user = "root"
-pwd = "123456"
+pwd = "root"
 db_name = "signin"
 # 注册时绑定学生信息
 def InsertIntoStudentInfo(student_id, student_name, openid):

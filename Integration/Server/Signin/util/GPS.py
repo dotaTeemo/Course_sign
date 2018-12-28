@@ -1,3 +1,4 @@
+# coding=utf-8
 from math import *
 
 # 根据经纬度计算两地直线距离，单位：km

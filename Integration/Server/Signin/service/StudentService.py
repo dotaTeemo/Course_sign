@@ -1,3 +1,4 @@
+# coding=utf-8
 from DAO.StudentDAO import *
 from util.GPS import *
 import datetime
