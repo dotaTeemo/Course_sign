@@ -2,13 +2,100 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0de9509-379c-4cb6-ad8e-6feab369863b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAO/StudentDAO.py" beforeDir="false" afterPath="$PROJECT_DIR$/DAO/StudentDAO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAO/TeacherDAO.py" beforeDir="false" afterPath="$PROJECT_DIR$/DAO/TeacherDAO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/app.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/lib/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/lib/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/lib/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/lib/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/lib/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/lib/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/lib/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/lib/course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/lib/plus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/lib/time.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/lib/weui.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/addcourse/addcourse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/addcourse/addcourse.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/addcourse/addcourse.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/addcourse/addcourse.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/answer/answer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/answer/answer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/answer/answer.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/answer/answer.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcourse.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcourse/checkcourse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcourse/checkcourse.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcourse/checkcourse.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcourse/checkcourse.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcoursecomment/checkcoursecomment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcoursecomment/checkcoursecomment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcoursecomment/checkcoursecomment.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcoursecomment/checkcoursecomment.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcourseresult/checkcourseresult.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcourseresult/checkcourseresult.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcourseresult/checkcourseresult.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/checkcourseresult/checkcourseresult.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/coursesign/coursesign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/coursesign/coursesign.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/coursesign/coursesign.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/coursesign/coursesign.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/index/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/index/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/index/index.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/index/index.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/inputsign/inputsign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/inputsign/inputsign.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/inputsign/inputsign.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/inputsign/inputsign.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/logs/logs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/logs/logs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/logs/logs.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/logs/logs.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/startsign/startsign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/startsign/startsign.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/startsign/startsign.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/startsign/startsign.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/stopsign/stopsign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/stopsign/stopsign.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/stopsign/stopsign.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/stopsign/stopsign.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentaddcourse/studentaddcourse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentaddcourse/studentaddcourse.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentaddcourse/studentaddcourse.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentaddcourse/studentaddcourse.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentbind/studentbind.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentbind/studentbind.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentbind/studentbind.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentbind/studentbind.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentcourse/studentcourse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentcourse/studentcourse.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentcourse/studentcourse.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentcourse/studentcourse.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentinfo/studentinfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentinfo/studentinfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentinfo/studentinfo.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentinfo/studentinfo.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentinputsign/studentinputsign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentinputsign/studentinputsign.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentinputsign/studentinputsign.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentinputsign/studentinputsign.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentsignreturn/studentsignreturn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentsignreturn/studentsignreturn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentsignreturn/studentsignreturn.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/studentsignreturn/studentsignreturn.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/teacher/teacher.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/teacher/teacher.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/teacher/teacher.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/teacher/teacher.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/whonosign/whonosign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/whonosign/whonosign.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/whonosign/whonosign.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/pages/whonosign/whonosign.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/project.config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../教辅小程序/utils/util.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +167,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-247">
+            <state relative-caret-position="-46">
               <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#48#67#0" expanded="true" />
@@ -156,8 +243,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="500" />
-    <option name="y" value="22" />
+    <option name="x" value="166" />
+    <option name="y" value="42" />
     <option name="width" value="1750" />
     <option name="height" value="1002" />
   </component>
@@ -368,12 +455,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540602440389</updated>
-      <workItem from="1545970780385" duration="1501000" />
+      <workItem from="1545970780385" duration="2137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1501000" />
+    <option name="totallyTimeSpent" value="2137000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,15 +472,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="400" y="18" width="1400" height="801" extended-state="0" />
-    <editor active="true" />
+    <frame x="133" y="34" width="1400" height="801" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2891207" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2891207" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3213752" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3213752" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -402,7 +488,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32735425" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -563,7 +649,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-247">
+        <state relative-caret-position="-46">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#48#67#0" expanded="true" />
