@@ -1,3 +1,4 @@
+# coding=utf-8
 import pymysql, datetime,uuid
 ip = "111.230.34.63"
 user = "root"

@@ -1,3 +1,4 @@
+﻿# coding=utf-8
 # 导入应用的语法：
 # from app import application
 # 示范：
