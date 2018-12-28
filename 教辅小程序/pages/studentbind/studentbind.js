@@ -35,7 +35,7 @@ Page({
       success: function (res) {
         var openId = res.data
         wx.request({
-          url: "http://localhost:5000/bindStudentInfo",
+          url: "http://111.230.34.63:80/bindStudentInfo",
           data: {
             'studentName': e.detail.value.studentName,
             'studentID': e.detail.value.studentID,
@@ -106,7 +106,7 @@ Page({
       success: function (res) {
         var openId = res.data
         wx.request({
-          url: "http://localhost:5000/getStudentInfo",
+          url: "http://111.230.34.63:80/getStudentInfo",
           data: {
             'openID': openId
           },

@@ -58,7 +58,7 @@ Page({
   },
   teacherAddCourse: function (e) {
     wx.request({
-      url: "http://localhost:5000/teacherAddCourse",
+      url: "http://111.230.34.63:80/teacherAddCourse",
       data: {
         'teacherID': 123,
         'courseName': e.detail.value.courseName,

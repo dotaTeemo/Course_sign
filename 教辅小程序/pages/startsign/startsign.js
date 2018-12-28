@@ -54,7 +54,7 @@ Page({
       startDate: option.startDate,
       getNowSignTimer: setInterval(function () {
         wx.request({
-          url: "http://localhost:5000/getNowSignInResult",
+          url: "http://111.230.34.63:80/getNowSignInResult",
           data: {
             'courseID': page.data.courseID
           },

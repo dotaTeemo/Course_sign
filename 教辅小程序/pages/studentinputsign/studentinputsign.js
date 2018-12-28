@@ -62,7 +62,7 @@ Page({
   },
   studentSign: function () {
     wx.request({
-      url: "http://localhost:5000/studentSign",
+      url: "http://111.230.34.63:80/studentSign",
       data: {
         'signNumber': this.data.num1 + this.data.num2 + this.data.num3 + this.data.num4,
         'studentName': this.data.studentName,

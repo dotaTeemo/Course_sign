@@ -6,7 +6,7 @@
     <text style='font-size: 20px;margin-left:10%;'>课程名称</text>
     <view class='deliever'></view>
     <view class="addcourse_label section">  
-      <input name='courseName' style='font-size: 12px' placeholder="请输入课程名称" auto-focus />
+      <input name='courseName' style='font-size: 12px' placeholder="请输入课程名称"/>
     </view>
   </view>
   <view class='blank'></view>
@@ -14,7 +14,7 @@
     <text style='font-size: 20px;margin-left:10%;'>课程人数</text>
     <view class='deliever'></view>
     <view class="addcourse_label section">  
-      <input name='studentNumber' style='font-size: 12px' placeholder="请输入课程人数" auto-focus />
+      <input name='studentNumber' style='font-size: 12px' placeholder="请输入课程人数"/>
     </view>
   </view>
   <view class='blank'></view>

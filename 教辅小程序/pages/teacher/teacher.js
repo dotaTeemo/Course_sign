@@ -68,7 +68,7 @@ Page({
     //获得该老师所有课程信息
     var page = this
     wx.request({
-      url: "http://localhost:5000/getTeacherCourses",
+      url: "http://111.230.34.63:80/getTeacherCourses",
       data: {
         'teacherID': 123
       },

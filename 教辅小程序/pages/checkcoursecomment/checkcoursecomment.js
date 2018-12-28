@@ -30,7 +30,7 @@ Page({
     //获得该课程的所有反馈信息
     var page = this
     wx.request({
-      url: "http://localhost:5000/getCourseAllComments",
+      url: "http://111.230.34.63:80/getCourseAllComments",
       data: {
         'courseID': this.data.courseID
       },

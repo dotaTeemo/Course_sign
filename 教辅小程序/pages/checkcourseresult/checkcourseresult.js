@@ -61,7 +61,7 @@ Page({
     //获得该节课所有签到信息
     var page = this
     wx.request({
-      url: "http://localhost:5000/getSignInResult",
+      url: "http://111.230.34.63:80/getSignInResult",
       data: {
         'courseID': page.data.courseID
       },

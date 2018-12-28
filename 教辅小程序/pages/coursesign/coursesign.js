@@ -69,7 +69,7 @@ Page({
   startsign: function(e){
     var page = this
     wx.request({
-      url: "http://localhost:5000/teacherStartSign",
+      url: "http://111.230.34.63:80/teacherStartSign",
       data: {
         'courseID': this.data.courseID,
         'signNumber': this.data.num1 + this.data.num2 + this.data.num3 + this.data.num4,

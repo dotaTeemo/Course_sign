@@ -17,7 +17,7 @@ Page({
       key: 'studentID',
       success: function (res) {
         wx.request({
-          url: "http://localhost:5000/getStudentUnselectedCourses",
+          url: "http://111.230.34.63:80/getStudentUnselectedCourses",
           data: {
             'studentID': res.data
           },
@@ -70,7 +70,7 @@ Page({
             key: 'studentID',
             success: function(res) {
               wx.request({
-                url: "http://localhost:5000/studentAddCourse",
+                url: "http://111.230.34.63:80/studentAddCourse",
                 data: {
                   'studentID': res.data,
                   'courseID': course.id

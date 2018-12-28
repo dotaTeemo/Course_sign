@@ -38,7 +38,7 @@ Page({
 
     var page = this
     wx.request({
-      url: "http://localhost:5000/teacherStopSign",
+      url: "http://111.230.34.63:80/teacherStopSign",
       data: {
         'courseID': this.data.courseID,
         'startDate': this.data.startDate

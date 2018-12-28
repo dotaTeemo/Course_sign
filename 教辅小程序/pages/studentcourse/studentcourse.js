@@ -19,7 +19,7 @@ Page({
       key: 'studentID',
       success: function(res) {
         wx.request({
-          url: "http://localhost:5000/getStudentCourses",
+          url: "http://111.230.34.63:80/getStudentCourses",
           data: {
             'studentID': res.data
           },
@@ -58,7 +58,7 @@ Page({
       key: 'studentID',
       success: function (res) {
         wx.request({
-          url: "http://localhost:5000/studentAddComment",
+          url: "http://111.230.34.63:80/studentAddComment",
           data: {
             'studentID': res.data,
             'courseID': page.data.courseID,
@@ -86,7 +86,7 @@ Page({
             key: 'studentID',
             success: function (res) {
               wx.request({
-                url: "http://localhost:5000/studentDeleteCourse",
+                url: "http://111.230.34.63:80/studentDeleteCourse",
                 data: {
                   'studentID': res.data,
                   'courseID': course.id
